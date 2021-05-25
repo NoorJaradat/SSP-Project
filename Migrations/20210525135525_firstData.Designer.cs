@@ -3,14 +3,16 @@ using Assignment3.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Assignment3.Migrations
 {
     [DbContext(typeof(NurseDbContext))]
-    partial class NurseDbContextModelSnapshot : ModelSnapshot
+    [Migration("20210525135525_firstData")]
+    partial class firstData
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -34,9 +36,6 @@ namespace Assignment3.Migrations
                         .HasMaxLength(15)
                         .HasColumnType("nvarchar(15)");
 
-                    b.Property<string>("PhotoName")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<int>("Section")
                         .HasColumnType("int");
 
@@ -51,20 +50,6 @@ namespace Assignment3.Migrations
                             Email = "ali@nurses.com",
                             Name = "Ali",
                             Section = 1
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Email = "ahmad@nurses.com",
-                            Name = "Ahmad",
-                            Section = 3
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Email = "muna@nurses.com",
-                            Name = "Muna",
-                            Section = 0
                         });
                 });
 #pragma warning restore 612, 618
