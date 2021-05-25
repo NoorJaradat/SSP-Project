@@ -18,6 +18,7 @@ namespace Assignment3.Models
         public string Email { get; set; }
         [Required]
         public SectionEnum? Section { get; set; }
+        public string PhotoName { get; set; }
         
     }
 }
