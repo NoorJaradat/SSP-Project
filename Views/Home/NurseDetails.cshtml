@@ -1,6 +1,7 @@
 ﻿@model HomeNurseDetailsViewModel
 @{
     ViewBag.Title = "Nurses";
+    var photoPath = "~/img/" + (Model.Nurse.PhotoName??"logo.png");
 }
 <div class="row justify-content-center m-3">
     <div class="col-sm-8">
@@ -11,7 +12,7 @@
             
         </div>
         <div class="card-body text-center">
-            
+            <img class="card-img-top" style="height:100pt;width:100pt;" src=@photoPath asp-append-version="true" />
             <h4>ID: @Model.Nurse.Id</h4>
             <h4>Email: @Model.Nurse.Email</h4>
             <h4>Deptartment: @Model.Nurse.Section</h4>
