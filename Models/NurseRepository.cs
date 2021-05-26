@@ -24,7 +24,7 @@ namespace Assignment3.Models
         {
             return nurses.Where(n => n.Id == id).FirstOrDefault();
         }
-        public IEnumerable<Nurse> getAll()
+        public IEnumerable<Nurse> ShowAllNurses()
         {
             return nurses;
         }

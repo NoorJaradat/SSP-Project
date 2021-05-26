@@ -5,10 +5,10 @@ using System.Threading.Tasks;
 
 namespace Assignment3.Models
 {
-    interface INurseRepository
+    public interface INurseRepository
     {
         public Nurse GetNurse(int? id);
-        public IEnumerable<Nurse> getAll();
+        public IEnumerable<Nurse> ShowAllNurses();
         public Nurse Add(Nurse nurse);
         public Nurse Delete(int id);
         public Nurse Update(Nurse changedNurse);

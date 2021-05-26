@@ -32,7 +32,7 @@ namespace Assignment3.Models
             
         }
 
-        public IEnumerable<Nurse> getAll()
+        public IEnumerable<Nurse> ShowAllNurses()
         {
             return context.Nurses;
         }
